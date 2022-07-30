@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { prisma } from '../../db/client';
+import { prisma } from '../../../db/client';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!slug || typeof slug !== 'string') {
     res.statusCode = 404;
 
-    res.send(JSON.stringify({ message: 'Use with a slug' }));
+    res.send(JSON.stringify({ message: 'pls use with a slug' }));
 
     return;
   }
@@ -25,10 +25,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!data) {
     res.statusCode = 404;
 
-    res.send(JSON.stringify({ message: 'Slug not found' }));
+    res.send(JSON.stringify({ message: 'slug not found' }));
 
     return;
   }
 
-  return res.redirect(data.url);
+  return res.json(data);
 };
