@@ -6,7 +6,7 @@ import { prisma } from '../../../db/client';
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const slug = req.query['slug'];
 
-  if (!slug || typeof slug !== 'string') {
+  if (!slug || typeof slug !== 'string' || slug === 'favicon.ico') {
     res.statusCode = 404;
 
     res.send(JSON.stringify({ message: 'pls use with a slug' }));

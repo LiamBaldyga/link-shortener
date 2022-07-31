@@ -15,3 +15,7 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.redirect(data.url);
   }
 }
+
+export const config = {
+  matcher: '/:slug',
+};
