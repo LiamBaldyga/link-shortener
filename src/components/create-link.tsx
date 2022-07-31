@@ -59,7 +59,7 @@ const CreateLinkForm: NextPage = () => {
           }}
         />
         <button
-          className=' ml-1 px-3 bg-gray-700 rounded-lg'
+          className=' ml-1 px-3 bg-gray-700 rounded-lg hover:bg-gray-600 active:scale-95 transition ease-in-out'
           type='button'
           onClick={() => {
             const slug = nanoid();
@@ -79,9 +79,9 @@ const CreateLinkForm: NextPage = () => {
       <input
         type='submit'
         value='Create'
-        className='text-white focus:ring-4 focus:outline-none font-medium
+        className='text-white focus:outline-none font-medium
       rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center bg-blue-600
-      hover:bg-blue-700 focus:ring-blue-800'
+      hover:bg-blue-700 active:scale-95 transition ease-in-out'
         disabled={checkSlug.isFetched && checkSlug.data?.used}
       />
     </form>

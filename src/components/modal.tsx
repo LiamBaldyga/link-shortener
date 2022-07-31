@@ -57,14 +57,14 @@ export default function Modal({ open, setOpen, url, slug }: args) {
                       </Dialog.Title>
 
                       <div className='mt-2 flex justify-between w-full bg-gray-700 rounded-lg p-2 items-center'>
-                        <p className='text-md text-gray-300 text-center'>
+                        <p className='text-md text-gray-300 text-center pl-2'>
                           {`${url}/${slug}`}
                         </p>
                         <button
                           type='button'
-                          className='text-white focus:ring-4 focus:outline-none font-medium
-                                rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center bg-blue-600
-                                hover:bg-blue-700 focus:ring-blue-800'
+                          className='text-white focus:outline-none font-medium
+      rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center bg-blue-600
+      hover:bg-blue-700 active:scale-95 transition ease-in-out'
                           onClick={() => {
                             copy(`${url}/${slug}`);
                           }}
@@ -78,9 +78,9 @@ export default function Modal({ open, setOpen, url, slug }: args) {
                 <div className='bg-gray-900 px-4 py-3 sm:px-6 flex justify-center'>
                   <button
                     type='button'
-                    className='text-white focus:ring-4 focus:outline-none font-medium
+                    className='text-white focus:outline-none font-medium
       rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center bg-blue-600
-      hover:bg-blue-700 focus:ring-blue-800'
+      hover:bg-blue-700 active:scale-95 transition ease-in-out'
                     onClick={onClose}
                   >
                     Close
