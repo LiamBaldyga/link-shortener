@@ -58,7 +58,7 @@ export default function Modal({ open, setOpen, url, slug }: args) {
 
                       <div className='mt-2 flex justify-between w-full bg-gray-700 rounded-lg p-2 items-center'>
                         <p className='text-md text-gray-300 text-center pl-2'>
-                          {`${url}/${slug}`}
+                          {`${url}/${slug}/`}
                         </p>
                         <button
                           type='button'

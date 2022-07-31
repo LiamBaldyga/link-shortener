@@ -45,7 +45,7 @@ const CreateLinkForm: NextPage = () => {
       {/* Slug */}
       <div className='flex'>
         <span className='inline-flex items-center py-2 px-3 text-sm  rounded-l-md border border-r-0 bg-gray-800 text-gray-300 border-gray-600'>
-          {url}
+          {url}/
         </span>
         <input
           type='text'
