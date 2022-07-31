@@ -31,7 +31,7 @@ const CreateLinkForm: NextPage = () => {
     >
       <Modal open={open} setOpen={setOpen} url={url} slug={slug} />
       {/* Link to shorten */}
-      <label htmlFor='link-input' className='text-center'>
+      <label htmlFor='link-input' className='text-center text-3xl'>
         Enter a link to shorten
       </label>
       <input
